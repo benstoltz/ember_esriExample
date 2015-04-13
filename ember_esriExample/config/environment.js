@@ -19,6 +19,14 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'script-src': "'self' 'unsafe-eval' 'unsafe-inline' http://js.arcgis.com/3.13/",
+    'font-src': "'self' 'unsafe-inline' http://js.arcgis.com/3.13/",
+    'style-src': "'self' 'unsafe-eval' http://js.arcgis.com/3.13/esri/css/esri.css",
+    'img-src': "'self' 'unsafe-eval' 'unsafe-inline' data: http://js.arcgis.com/3.13/"
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/ember-esri-example.css">
 
     <link rel="stylesheet" href="http://js.arcgis.com/3.13/esri/css/esri.css">
-    <script src="http://js.arcgis.com/3.13/"></script>
+
 
     {{content-for 'head-footer'}}
   </head>
@@ -25,5 +25,20 @@
 
     {{content-for 'body-footer'}}
   </body>
+
+  <script>
+
+    dojoConfig = {
+      parseOnLoad: false,
+      packages: [
+        {"name": "map",
+         "location": location.pathname.replace(/\/[^/]+$/, "") + "/components/map"}
+
+      ]
+    };
+
+  </script>
+
+  <script src="http://js.arcgis.com/3.13/"></script>
 
 </html>

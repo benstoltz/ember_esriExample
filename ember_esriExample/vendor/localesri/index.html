@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="esri/css/esri.css">
+    <style type="text/css">
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+</body>
+<script src="dojo/dojo.js" data-dojo-config="async: true"></script>
+<script type="text/javascript">
+    require(["esri/map", "dojo/domReady!"], function(Map) {
+      var map = new Map("map", {
+        center: [-118, 34.5],
+        zoom: 8,
+        basemap: "light-gray"
+      });
+    });
+</script>
+
+</html>
